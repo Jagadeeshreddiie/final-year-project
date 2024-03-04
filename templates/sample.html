@@ -28,29 +28,6 @@
       </div>
     </div>
   </nav>
-
-  <!-- display on clicking view button -->
-
-
-  <div class="container" id="single-complaint" style=" display: none;">
-    <a href="view-complaints.html"><button class="btn btn-danger mb-3" id="close-complaint" onclick="closecomplaint()">Back</button></a>
-    <div class="card">
-      <div class="card-header">Complaint Details</div>
-      <div class="card-body">
-        <blockquote class="blockquote mb-0">
-          <h5>
-            {complaint Description}
-          </h5>
-        </blockquote>
-      </div>
-      <div class="card-footer">
-          <img src="#" alt="complaint-image">
-      </div>
-    </div>
-  </div>
-
-<!-- complaints records -->
-
   <div class="container" id="complaints-page">
     <div class="row">
       <h1 class="text-center m-4">
@@ -70,7 +47,6 @@
             <th scope="col">FIR copy</th>
           </tr>
         </thead>
-        
         <tbody>
           <tr>
             <th scope="row">1</th>
@@ -107,13 +83,29 @@
     </div>
   </div>
 
- 
+  <div class="container" id="single-complaint" style="margin-top: 100px; display: none;">
+    <a href="view-complaints.html"><button class="btn btn-danger mb-3" id="close-complaint" onclick="closecomplaint()">Back</button></a>
+    <div class="card">
+      <div class="card-header">Complaint Details</div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <h5>
+            {complaint Description}
+          </h5>
+        </blockquote>
+      </div>
+      <div class="card-footer">
+          <img src="#" alt="complaint-image">
+      </div>
+    </div>
+  </div>
+
   <script>
     var div = document.getElementById("complaints-page");
     var div2 = document.getElementById("single-complaint");
 
     function handleView() {
-      div.style.opacity = 0.1;
+      div.style.opacity = 0.3;
       div2.style.display = "block";
     }
 
